@@ -1,0 +1,276 @@
+a, * { outline: none!important; }
+h2 { font-weight: bold; }
+body { background-color: rgb(0, 121, 191); }
+body, button, html, input, select, textarea {
+    color: #4d4d4d;
+    font: 14px "Helvetica Neue",Arial,Helvetica,sans-serif;
+    line-height: 18px;
+}
+#surface, .board-main-content, .board-menu-container, .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
+#surface, body, html, .container-fluid {
+    height: 100%;
+}
+#surface {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+#surface>#content {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+#content, .button, .u-relative, body, sub, sup {
+    position: relative;
+}
+
+.editable-click, a.editable-click { border-bottom: none; }
+.editable-controls .editable-input { display: block; }
+.editable-controls .editable-input.editable-has-buttons { width: 100%; }
+.editable-controls .editable-buttons { margin: 5px 0 4px 0; }
+.editable-buttons button { margin-left: 0; }
+.editable-buttons button:first-child { margin-right: 5px; }
+
+.board-wrapper { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.board-main-content {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-right: 0;
+    -webkit-transition: margin .1s ease-in;
+    transition: margin .1s ease-in;
+}
+
+.board-canvas {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+#board, .open-card-composer {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#board {
+    white-space: nowrap;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.list, .list-wrapper {
+    -moz-box-sizing: border-box;
+}
+.list-wrapper {
+    max-width: 270px;
+    width: 100%;
+    /* margin: 0 5px; */
+    height: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.list-wrapper:first-child {
+    margin: 0 10px 0 0;
+}
+.list-wrapper:last-child {
+    margin: 0 0 0 10px;
+}
+
+.list {
+    background: #e2e4e6;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    white-space: normal;
+}
+
+.list-header {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 8px 34px 8px 10px;
+    position: relative;
+    min-height: 19px;
+}
+
+.list-header.editable {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+}
+.list-header-name {
+    display: inline;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+    min-height: 19px;
+    min-width: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.editable .current, .pop-over-ad, .tooltip-trigger {
+    cursor: pointer;
+}
+.editable .current, .pop-over-ad, .tooltip-trigger {
+    cursor: pointer;
+}
+
+.editing .edits-warning, .editing .hide-on-edit {
+    display: none!important;
+}
+
+.edit {
+    display: none;
+    position: relative;
+}
+
+.editing .edit {
+    display: block;
+    float: left;
+    padding-bottom: 9px;
+    z-index: 50;
+    width: 100%;
+}
+
+body.chrome-47 .list-cards, body.chrome-48 .list-cards, body.chrome-49 .list-cards, body.chrome-50 .list-cards {
+    overflow-y: overlay;
+    margin-right: 2px;
+    padding: 0 9px 0 5px;
+}
+.list-cards {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 4px;
+    padding: 0 4px;
+    z-index: 1;
+    min-height: 0;
+}
+
+.list-cards {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 4px;
+    padding: 0 4px;
+    z-index: 1;
+    min-height: 0;
+}
+
+.list-card {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 6px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    z-index: 0;
+}
+.list-card-labels {
+    margin: 2px 0;
+    overflow: auto;
+    position: relative;
+}
+
+.list-card-details {
+    overflow: auto;
+    padding: 6px 6px 2px 8px;
+    position: relative;
+    z-index: 10;
+}
+.card-label {
+    background-color: #b6bbbf;
+    /* border-radius: 3px; */
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    margin-right: 3px;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 3px 6px;
+    position: relative;
+    text-overflow: ellipsis;
+    text-shadow: 0 0 5px rgba(0,0,0,.2),0 0 2px #000;
+    white-space: nowrap;
+}
+.card-label-green {
+    background-color: #61bd4f;
+}
+.card-label-yellow {
+    background-color: #f2d600;
+}
+.card-label-orange {
+    background-color: #ffab4a;
+}
+.card-label-red {
+    background-color: #eb5a46;
+}
+.card-label-purple {
+    background-color: #c377e0;
+}
+.card-label-blue {
+    background-color: #0079bf;
+}
+.list-card-labels .card-label {
+    float: left;
+    height: 8px;
+    margin: 0 3px 3px 0;
+    padding: 0;
+    width: 15px;
+    line-height: 75pt;
+}
+.list-card:before {
+	
+}
+.list-card.active-card, .list-card:hover {
+	background-color: #edeff0;
+	border-bottom-color: #d6dadc;
+}
+.edit-btns { margin-top: 5px; }
+.form-text { padding: 5px; }
